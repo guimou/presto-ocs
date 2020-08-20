@@ -25,15 +25,10 @@ spec:
     cpuRequest: ''
     memoryAllocation: ''
   worker:
-    autoscaling:
-      enabled: true
-      maxReplicas: 100
-      minReplicas: 1
-      targetCPUUtilizationPercentage: 80
-    count: 2
-    cpuLimit: '4'
-    cpuRequest: '4'
-    memoryAllocation: ''
+    count: 8
+    cpuLimit: '40'
+    cpuRequest: '40'
+    memoryAllocation: '120Gi'
     prestoWorkerShutdownGracePeriodSeconds: 1
   hive:
     additionalProperties: |
